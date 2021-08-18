@@ -1,10 +1,20 @@
+function stringWord(word) {
+  let newArray = word.split(" ");
+  let results = []
+  newArray.forEach(function (element) {
+    let result = pigLatin(element);
+    results.push(result);
+  });
+  return results;
+}
+
 function pigLatin(word) {
-  let temp = word.toLowerCase().replace(/[\W0-9_]/gi,"");
+  let temp = word.toLowerCase().replace(/[\W0-9_]/gi, "");
   if (isAVowel(temp[0])) {
     return temp + "way";
   } else {
-    if ("qu" === temp.slice(0,2)) {
-      temp = temp.slice(2) + temp.slice(0,2);
+    if ("qu" === temp.slice(0, 2)) {
+      temp = temp.slice(2) + temp.slice(0, 2);
     } else {
       while (!isAVowel(temp[0])) {
         temp = temp.slice(1) + temp[0];
@@ -29,11 +39,12 @@ function isAVowel(char) {
 }
 
 //ui logic
-$(document).ready(function(){
-  $("form#word-form").submit(function(event){
+$(document).ready(function () {
+  $("form#word-form").submit(function (event) {
     event.preventDefault();
     const word = $("#word-input").val();
     const pigWord = pigLatin(word);
-    $("#display").html(pigWord);
+    const results2 = stringWord(word);
+    $("#display").html(results2);
   });
 });
