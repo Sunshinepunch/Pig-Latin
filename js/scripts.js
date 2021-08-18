@@ -1,6 +1,5 @@
 function pigLatin(word) {
-  let temp = word.toLowerCase();
-
+  let temp = word.toLowerCase().replace(/[\W0-9_]/gi,"");
   if (isAVowel(temp[0])) {
     return temp + "way";
   } else {
