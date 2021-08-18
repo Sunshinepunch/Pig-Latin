@@ -5,5 +5,5 @@ function pigLatin(word) {
 }
 
 function isAVowel(char) {
-  char
+  const vowels = ["a", "e", "i", "o", "u"];
 }
