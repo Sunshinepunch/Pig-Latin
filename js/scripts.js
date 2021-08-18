@@ -8,10 +8,10 @@ function stringWord(word) {
   return results.join(" ");
 }
 
-function noInputtedWord(word) {
-  return ((word.trim().length === 0));
+// function noInputtedWord(word) {
+//   return ((word.trim().length === 0));
 
-}
+// }
 
 function pigLatin(word) {
   let temp = word.toLowerCase().replace(/[\W0-9_]/gi, "");
