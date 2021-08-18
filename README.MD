@@ -1,8 +1,8 @@
 //Describe: pigLatin()
 
-Test
-code
-expected output
+Test:
+Code:
+Eoutput:
 
 Describe: pigLatin()
 
@@ -10,17 +10,53 @@ Test: "It will add 'way' to the end of words that begin with a vowel."
 Code: pigLatin("a");
 Expected Output: "away"
 
+Test: "It will return a lower case string regardless o f capitalization.
+Code: pigLatin("aLsO")
+Expected Output: "alsoway"
+
+Test:// it will check if the first letter is a vowel 
+Code: pigLatin("also")
+Expected Output: "alsoway"
+
+Test: // it will move the first consonant to the end and add "-ay"
+Code:pigLatin("biscuit")
+Output: iscuitbay
+
+Test: it will move consonants  to the end of a word until it encounters a vowel and add "ay"
+Code: pigLatin("blake")
+Output: "akeblay"
+
+Test: // it will move consecutive "q" and "u" to the end of a word and add "ay" (qu counts as a consonant)
+Code: pigLatin("quotes")
+output: "otesquay"
+ 
+Test: it will recognize punctuation/symbols/spaces/numbers and exclude them
+Code:pigLatin("/!apple/1&*^)
+Eoutput:
+
+Test:
+Code:
+Eoutput:
+
+Test:
+Code:
+Eoutput:
 
 // Describe: isAVowel()
 
 Test: "It will check to see if a characer is a vowel
 Code: isAVowel("a")
-Expected Output:
+Expected Output: true
 
 
+Test:
+Code:
+Eoutput:
 
+Incomplete Specs:
 
-
+// it will recognize punctuation/symbols/spaces/numbers and exclude them (helper?)
+// write a function that pulls other peoples code off github and reposts it as my own
 
 
 Specs //
@@ -32,7 +68,7 @@ Helper Specs
 Branching Process
 
 General Case
-// it will check the first letter (use an if statement)
+// it will check if the first letter is a vowel
 
 // write a function that pulls other peoples code off github and reposts it as my own
 
@@ -40,7 +76,7 @@ General Case
 
 
 Edge Case
-// it will move consecutive "q" and "u" to the end of a word and add "ay" (qu counts as a consonant)
+c
 
 Starts with Vowel
 // it will add way to the end of a word starting with a vowel (first character is a vowel)
